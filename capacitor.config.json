@@ -1,5 +1,11 @@
 {
   "appId": "com.lumina.app",
   "appName": " Expense Tracker Pro",
-  "webDir": "public"
+  "webDir": "public",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0,
+      "launchAutoHide": true
+    }
+  }
 }
