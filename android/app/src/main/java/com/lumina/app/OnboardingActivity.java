@@ -22,8 +22,7 @@ public class OnboardingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Native Splash Screen API (Android 12+) should be installed here if we were using the core-splashscreen library.
-        // But since we rely on the theme, it handles it before onCreate.
+        androidx.core.splashscreen.SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
 
         SharedPreferences prefs = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE);
