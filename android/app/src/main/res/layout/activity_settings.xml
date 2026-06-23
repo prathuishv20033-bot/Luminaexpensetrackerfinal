@@ -48,6 +48,23 @@
             android:textColor="#94a3b8"
             android:textSize="12sp"
             android:layout_marginBottom="16dp"/>
+
+        <Switch
+            android:id="@+id/switch_haptic"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Minimal Haptic Feedback"
+            android:textColor="#f8fafc"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="8dp"/>
+            
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Provides a subtle vibration when interacting with buttons (e.g., adding transactions)."
+            android:textColor="#94a3b8"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"/>
             
     </LinearLayout>
 

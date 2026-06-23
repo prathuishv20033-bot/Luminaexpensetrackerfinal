@@ -40,22 +40,7 @@ public class OnboardingActivity extends AppCompatActivity {
         etBudget = findViewById(R.id.et_budget);
         btnNameNext = findViewById(R.id.btn_name_next);
 
-        // Step 1 buttons
-        findViewById(R.id.btn_tutorial_next).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewFlipper.showNext();
-            }
-        });
-
-        findViewById(R.id.btn_tutorial_skip).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewFlipper.setDisplayedChild(1); // Jump to Name screen
-            }
-        });
-
-        // Step 2 logic (Name)
+        // Step 1 logic (Name)
         etName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}

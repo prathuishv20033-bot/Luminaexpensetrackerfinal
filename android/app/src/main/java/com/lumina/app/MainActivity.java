@@ -46,17 +46,23 @@ public class MainActivity extends BridgeActivity {
             this.bridge.getWebView().setVisibility(View.VISIBLE);
         }
         
-        // Ensure webview has native haptics when interacting with it
+        // Provide a JavascriptInterface to trigger haptics minimally from web code
         if (this.bridge != null && this.bridge.getWebView() != null) {
-            this.bridge.getWebView().setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                        v.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
+            this.bridge.getWebView().addJavascriptInterface(new Object() {
+                @android.webkit.JavascriptInterface
+                public void trigger() {
+                    SharedPreferences prefs = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE);
+                    boolean isHapticEnabled = prefs.getBoolean("haptic_enabled", false);
+                    if (isHapticEnabled) {
+                        bridge.getWebView().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                bridge.getWebView().performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
+                            }
+                        });
                     }
-                    return false;
                 }
-            });
+            }, "androidHaptic");
         }
     }
 

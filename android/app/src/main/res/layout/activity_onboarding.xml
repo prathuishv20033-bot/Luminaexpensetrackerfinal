@@ -15,57 +15,7 @@
         android:inAnimation="@android:anim/fade_in"
         android:outAnimation="@android:anim/fade_out">
 
-        <!-- Step 1: Welcome -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center">
-            
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:src="@drawable/ic_launcher_foreground"
-                android:layout_marginBottom="32dp"/>
-            
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Welcome to Expense Tracker Pro"
-                android:textColor="#f8fafc"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginBottom="16dp"/>
-                
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="The ultimate tool to track your spending and achieve your financial goals."
-                android:textColor="#94a3b8"
-                android:textSize="16sp"
-                android:gravity="center"
-                android:layout_marginBottom="48dp"/>
-                
-            <Button
-                android:id="@+id/btn_tutorial_next"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:text="Take the Tour"
-                android:backgroundTint="#3b82f6"
-                android:textColor="#ffffff"
-                android:layout_marginBottom="16dp"/>
-                
-            <Button
-                android:id="@+id/btn_tutorial_skip"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:text="Skip Tutorial"
-                android:background="@null"
-                android:textColor="#3b82f6"/>
-        </LinearLayout>
-
-        <!-- Step 2: Name (Mandatory) -->
+        <!-- Step 1: Name (Mandatory) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

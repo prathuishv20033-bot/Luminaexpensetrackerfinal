@@ -33,6 +33,15 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        Switch switchHaptic = findViewById(R.id.switch_haptic);
+        switchHaptic.setChecked(prefs.getBoolean("haptic_enabled", false));
+        switchHaptic.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                prefs.edit().putBoolean("haptic_enabled", isChecked).apply();
+            }
+        });
+
         findViewById(R.id.btn_clear_recorded_data).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
