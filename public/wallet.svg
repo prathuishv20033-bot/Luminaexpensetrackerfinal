@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="wallet-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="wallet-flap" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="wallet-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+  <rect x="64" y="128" width="384" height="256" rx="32" fill="url(#wallet-grad)" />
+  <path d="M64 160 C64 142.3 78.3 128 96 128 L416 128 C433.7 128 448 142.3 448 160 L448 224 L64 224 Z" fill="url(#wallet-flap)" />
+  <rect x="384" y="208" width="80" height="96" rx="16" fill="#1e3a8a" />
+  <circle cx="424" cy="256" r="24" fill="url(#wallet-accent)" />
+</svg>
