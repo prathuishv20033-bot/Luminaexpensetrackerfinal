@@ -62,6 +62,11 @@ public class MainActivity extends BridgeActivity {
                         });
                     }
                 }
+
+                @android.webkit.JavascriptInterface
+                public void openSettings() {
+                    startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+                }
             }, "androidHaptic");
         }
     }
